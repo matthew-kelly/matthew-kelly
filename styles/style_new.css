@@ -248,8 +248,9 @@ main #mobileContact {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(187, 187, 187);
+  background-color: rgb(240, 240, 240);
   overflow-x: hidden;
+  white-space: nowrap;
   padding-top: 60px;
   transition: 0.2s ease-in-out all;
   text-align: left;
@@ -270,15 +271,7 @@ main #mobileContact {
 }
 
 .contact-info-mobile a {
-  color: white;
-}
-
-.mobile-name {
-  padding-bottom: 1em;
-}
-
-.mobile-name a {
-  font-size: 1.25em;
+  color: rgb(0, 0, 0);
 }
 
 @media print {
@@ -372,7 +365,7 @@ main #mobileContact {
 
   .project-section {
     grid-template-columns: 1fr;
-    grid-template-areas: "picture" "content";
+    grid-template-areas: "picture""content";
   }
 
   .project-section a {
@@ -391,17 +384,6 @@ main #mobileContact {
   main #pdfTitle {
     display: inline-block;
     margin: 0px;
-  }
-
-  main #pdfTitle h2,
-  main #pdfTitle h3 {
-    font-size: 1.7em;
-    margin: 10px 2px 4px;
-  }
-
-  main #pdfTitle h3 {
-    font-size: .8em;
-    margin: 2px;
   }
 
   main h1,
@@ -432,5 +414,13 @@ main #mobileContact {
   #pdfSkills strong {
     font-weight: 400;
     color: orangered;
+  }
+
+  .mobile-name a {
+    font-size: 1.25em;
+  }
+
+  .mobile-job {
+    font-size: 1.2em;
   }
 }

@@ -1,11 +1,7 @@
 $(function () {
 
   $('#menu-button').on('click', (event) => {
-    console.log(event.currentTarget.children[0]);
-    // $(event.currentTarget.children[0]).css('color', 'white');
     $('.contact-info-mobile').toggleClass('expanded');
-    // $(event.currentTarget.children[0]).css('color', '#444');
-    // $('.contact-info-mobile').toggleClass('expanded');
   })
 
   var offset2 = $(document).height();
