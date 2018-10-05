@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Mono:400,700');
+
+main {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: #444;
+  margin: 30px 50px 50px 320px;
+  text-align: left;
+  line-height: 20px;
+  max-width: 900px;
+}
+
+main p {
+  margin: 0;
+}
+
+main ul {
+  padding-left: 2em;
+}
+
+main a {
+  color: #000;
+  text-decoration: none;
+}
+
+main a:hover {
+  color: orangered;
+  text-decoration: none;
+}
+
+main h1,
+main #sidebar h3,
+#sidebar main h3 {
+  font-weight: bolder;
+  font-size: 1.3em;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-transform: uppercase;
+  line-height: 35px;
+  color: #000;
+}
+
+main h1:after,
+main #sidebar h3:after,
+#sidebar main h3:after {
+  content: "";
+  margin-left: 10px;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  border-bottom: 1px solid;
+  overflow: hidden;
+  justify-content: space-around;
+}
+
+main h2,
+main h3 {
+  color: #000;
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+main h3 {
+  font-size: 1.1em;
+  margin-top: 0;
+}
+
+main .date {
+  font-style: italic;
+}
+
+main #experience .row {
+  line-height: 25px;
+  padding: 1px;
+}
+
+main #pdfSkills {
+  display: none;
+}
+
+main #pdfTitle {
+  font-size: 1em;
+  text-align: center;
+  display: none;
+  width: 100%;
+}
+
+main #mobileContact {
+  display: none;
+}
+
+#sidebar {
+  font-family: 'Open Sans', sans-serif;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  padding: 160px 10px 0 10px;
+  font-size: 12px;
+  background: #fff;
+  z-index: 1;
+}
+
+#sidebar a {
+  color: #000;
+  text-decoration: none;
+}
+
+#sidebar a:hover {
+  color: orangered;
+  text-decoration: none;
+}
+
+#sidebar ul li {
+  list-style: none;
+}
+
+#sidebar h1 {
+  color: #000;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+}
+
+#sidebar h2 {
+  color: #000;
+  font-size: 1.4em;
+  font-weight: 400;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+#sidebar h3 {
+  font-size: 130%;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-transform: uppercase;
+  line-height: 35px;
+  font-weight: 700;
+}
+
+#sidebar h3:after {
+  content: "";
+  margin-left: 10px;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  border-bottom: 1px solid;
+  overflow: hidden;
+  justify-content: space-around;
+}
+
+#sidebar img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#sidebar .contact-info {
+  overflow: auto;
+  vertical-align: top;
+  font-size: 1.05em;
+  margin: auto;
+  padding-left: 25px;
+}
+
+#sidebar .contact-info p {
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+#sidebar .skills p {
+  font-size: 1.05em;
+  padding: 0 10px;
+}
+
+#sidebar .skills strong {
+  font-style: none;
+  font-weight: 400;
+  font-size: 1.05em;
+  color: orangered;
+}
+
+.date-header {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  margin-bottom: 0.5em;
+}
+
+.date-header .header-title {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.header-subtitle {
+  font-size: 1.1em;
+  font-style: italic;
+}
+
+.resume-section {
+  margin-bottom: 1.5em;
+}
+
+.project-section {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 1em;
+  grid-template-areas: "picture content";
+  margin-bottom: 1.5em;
+}
+
+.project-section img {
+  grid-area: picture;
+  width: 100%;
+}
+
+.project-section h3 {
+  margin: 0;
+}
+
+.project-section ul {
+  margin: 10px 0 0 0;
+}
+
+.project-section .project-content {
+  grid-area: content;
+}
+
+#menu-button {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  font-size: 2em;
+  z-index: 999;
+}
+
+.contact-info-mobile {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(187, 187, 187);
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.2s ease-in-out all;
+  text-align: left;
+}
+
+.contact-info-mobile.expanded {
+  width: 100%;
+}
+
+.contact-info-mobile p {
+  padding: 1em;
+  margin-left: 2.5em;
+  font-size: 1.15em;
+}
+
+.contact-info-mobile p:first-of-type {
+  padding-top: 2.5em;
+}
+
+.contact-info-mobile a {
+  color: white;
+}
+
+.mobile-name {
+  padding-bottom: 1em;
+}
+
+.mobile-name a {
+  font-size: 1.25em;
+}
+
+@media print {
+  #education {
+    margin-top: 20px;
+  }
+
+  #sidebar {
+    display: none;
+  }
+
+  .row {
+    display: none;
+  }
+
+  #experience {
+    display: none;
+  }
+
+  main {
+    margin: 30px 20px;
+  }
+
+  main h1,
+  main #sidebar h3,
+  #sidebar main h3 {
+    margin-top: 5px;
+    padding-top: 0px;
+  }
+
+  main #pdfSkills {
+    display: inline-block;
+  }
+
+  main #pdfTitle {
+    font-size: 1.2em;
+    text-align: center;
+    display: inline-block;
+  }
+
+  main #pdfTitle h2,
+  main #pdfTitle h3 {
+    margin-top: 10px;
+    font-size: 1.7em;
+  }
+
+  main #pdfTitle h3 {
+    font-size: 1em;
+    margin: 2px;
+  }
+
+  main #pdfTitle .mobile-icon {
+    width: 5%;
+  }
+
+  main #pdfTitle #animation {
+    display: none;
+    margin: auto;
+  }
+
+  main #pdfTitle #education {
+    page-break-after: always;
+  }
+
+  main #pdfTitle a[href]:after {
+    content: none !important;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  #sidebar {
+    display: none;
+  }
+
+  .row {
+    display: none;
+  }
+
+  .resume-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .date-header {
+    flex-direction: column;
+  }
+
+  #experience {
+    display: none;
+  }
+
+  .project-section {
+    grid-template-columns: 1fr;
+    grid-template-areas: "picture" "content";
+  }
+
+  .project-section a {
+    margin: 0 0 1em auto;
+  }
+
+  main {
+    margin: 20px 20px;
+  }
+
+  main #pdfSkills {
+    display: inline-block;
+    width: 100%;
+  }
+
+  main #pdfTitle {
+    display: inline-block;
+    margin: 0px;
+  }
+
+  main #pdfTitle h2,
+  main #pdfTitle h3 {
+    font-size: 1.7em;
+    margin: 10px 2px 4px;
+  }
+
+  main #pdfTitle h3 {
+    font-size: .8em;
+    margin: 2px;
+  }
+
+  main h1,
+  main #sidebar h3,
+  #sidebar main h3 {
+    margin-top: 5px;
+    padding-top: 0px;
+  }
+
+  #animation {
+    width: 60%;
+  }
+
+  #summary {
+    padding-top: 0px;
+  }
+
+  #summary h1,
+  #summary #sidebar h3,
+  #sidebar #summary h3 {
+    margin-top: 0px;
+  }
+
+  .mobile-icon {
+    width: 5%;
+  }
+
+  #pdfSkills strong {
+    font-weight: 400;
+    color: orangered;
+  }
+}
