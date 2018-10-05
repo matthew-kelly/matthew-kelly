@@ -4,7 +4,7 @@ main {
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   color: #444;
-  margin: 30px 80px 50px 320px;
+  margin: 30px 50px 50px 320px;
   text-align: left;
   line-height: 20px;
   max-width: 900px;
@@ -14,13 +14,17 @@ main p {
   margin: 0;
 }
 
+main ul {
+  padding-left: 2em;
+}
+
 main a {
   color: #000;
   text-decoration: none;
 }
 
 main a:hover {
-  color: #188355;
+  color: orangered;
   text-decoration: none;
 }
 
@@ -71,11 +75,6 @@ main #experience .row {
   padding: 1px;
 }
 
-main #experience .row .col-md-6 {
-  padding-left: 21% !important;
-  margin-right: -14% !important;
-}
-
 main #pdfSkills {
   display: none;
 }
@@ -110,7 +109,7 @@ main #mobileContact {
 }
 
 #sidebar a:hover {
-  color: #188355;
+  color: orangered;
   text-decoration: none;
 }
 
@@ -185,21 +184,14 @@ main #mobileContact {
   font-style: none;
   font-weight: 400;
   font-size: 1.05em;
-  color: #188355;
-}
-
-.contact-info-mobile {
-  overflow: auto;
-  vertical-align: top;
-  font-size: 1.05em;
-  margin: auto;
-  padding-left: 25px;
+  color: orangered;
 }
 
 .date-header {
   display: flex;
   justify-content: space-between;
   color: black;
+  margin-bottom: 0.5em;
 }
 
 .date-header .header-title {
@@ -212,40 +204,81 @@ main #mobileContact {
   font-style: italic;
 }
 
-.projects {
-  margin: 20px;
-  margin-left: 20px;
-  display: block;
+.resume-section {
+  margin-bottom: 1.5em;
 }
 
-.projects .col-md-4 {
-  margin: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
+.project-section {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 1em;
+  grid-template-areas: "picture content";
+  margin-bottom: 1.5em;
 }
 
-.projects .col-md-8 {
-  padding: 20px 0;
-}
-
-.projects img {
+.project-section img {
+  grid-area: picture;
   width: 100%;
 }
 
-.projects img:hover {
-  cursor: pointer;
+.project-section h3 {
+  margin: 0;
 }
 
-.projtoggle {
-  font-size: 1em;
-  font-weight: bold;
-  margin: 25px;
-  margin-bottom: 40px;
+.project-section ul {
+  margin: 10px 0 0 0;
 }
 
-.projtoggle:hover {
-  color: #188355;
-  cursor: pointer;
+.project-section .project-content {
+  grid-area: content;
+}
+
+#menu-button {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  font-size: 2em;
+  z-index: 999;
+}
+
+.contact-info-mobile {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(187, 187, 187);
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.2s ease-in-out all;
+  text-align: left;
+}
+
+.contact-info-mobile.expanded {
+  width: 100%;
+}
+
+.contact-info-mobile p {
+  padding: 1em;
+  margin-left: 2.5em;
+  font-size: 1.15em;
+}
+
+.contact-info-mobile p:first-of-type {
+  padding-top: 2.5em;
+}
+
+.contact-info-mobile a {
+  color: white;
+}
+
+.mobile-name {
+  padding-bottom: 1em;
+}
+
+.mobile-name a {
+  font-size: 1.25em;
 }
 
 @media print {
@@ -258,10 +291,6 @@ main #mobileContact {
   }
 
   .row {
-    display: none;
-  }
-
-  .projtoggle {
     display: none;
   }
 
@@ -319,16 +348,12 @@ main #mobileContact {
   }
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 850px) {
   #sidebar {
     display: none;
   }
 
   .row {
-    display: none;
-  }
-
-  .projtoggle {
     display: none;
   }
 
@@ -343,6 +368,15 @@ main #mobileContact {
 
   #experience {
     display: none;
+  }
+
+  .project-section {
+    grid-template-columns: 1fr;
+    grid-template-areas: "picture" "content";
+  }
+
+  .project-section a {
+    margin: 0 0 1em auto;
   }
 
   main {
@@ -397,6 +431,6 @@ main #mobileContact {
 
   #pdfSkills strong {
     font-weight: 400;
-    color: #188355;
+    color: orangered;
   }
 }
